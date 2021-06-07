@@ -1,26 +1,31 @@
 package csvmanipulation;
-import java.io.FileNotFoundException;
-import java.io.File;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public class CSVBufferedReader
 {
-    private File fileName;
-    public CSVBufferedReader(File fileName)
-    {
-        this.fileName=fileName;
-    }
-    public void readThisCSVFile() throws FileNotFoundException
-    {
-        Scanner scanner= new Scanner(this.fileName);    
-        scanner.useDelimiter(",");
+    private String row="";
+    private String[] csv_data;
 
-        while (scanner.hasNext())
+    public void readThis(BufferedReader csv_reader) throws IOException
+    {
+        while ((row=csv_reader.readLine()) !=null)
         {
-            System.out.print(scanner.next()+"|");
+            csv_data=row.split(",");
         }
-        scanner.close();
+        printOutEachEntryIn(csv_data);
+        
     }
+    
+    private static void printOutEachEntryIn(String[] arr)
+    {
+        for (int i=0; i<arr.length;i++)
+        {
+            System.out.print(arr[i]+"|");
+        }
+
+    }
+    
 
     
     
