@@ -1,17 +1,18 @@
+package csvmanipulation;
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.util.Scanner;
 
-public class CSVScannerReader
+public class CSVBufferedReader
 {
-    private String fileName;
-    public CSVScannerReader(String fileName)
+    private File fileName;
+    public CSVBufferedReader(File fileName)
     {
         this.fileName=fileName;
     }
     public void readThisCSVFile() throws FileNotFoundException
     {
-        Scanner scanner= new Scanner(new File(this.fileName));    
+        Scanner scanner= new Scanner(this.fileName);    
         scanner.useDelimiter(",");
 
         while (scanner.hasNext())
@@ -20,5 +21,7 @@ public class CSVScannerReader
         }
         scanner.close();
     }
+
+    
     
 }
