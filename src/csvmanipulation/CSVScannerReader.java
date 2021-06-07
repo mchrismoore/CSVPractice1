@@ -7,13 +7,7 @@ public abstract class CSVScannerReader {
 
     public static void readThisCSVFile(File fileName) throws FileNotFoundException
     {
-        try{
-           Scanner scanner=new Scanner(fileName);
-        }        
-        catch (FileNotFoundException e)
-        {
-            throw new FileNotFoundException("Gang gang gang");
-        }
+        
         Scanner scanner=new Scanner(fileName);
         scanner.useDelimiter(",");
 

@@ -6,7 +6,7 @@ import csvmanipulation.*;
 public class CSVTester {
     public static void main(String[] agrs) throws FileNotFoundException
     {
-              CSVScannerReader.readThisCSVFile(new File("C:\\Users\\MChri\\OneDrive\\Desktop\\CSVPractice1\\src\\SampleCSVFile.csv"));
+              CSVScannerReader.readThisCSVFile(new File("src//SampleCSVFile.csv"));
     }
 
 
