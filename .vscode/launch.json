@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CSVBufferedReaderTester",
+            "request": "launch",
+            "mainClass": "csvmanipulation.tester.CSVBufferedReaderTester",
+            "projectName": "CSVPractice1_8a07980f"
+        },
+        {
+            "type": "java",
             "name": "Launch CSVTester",
             "request": "launch",
             "mainClass": "csvmanipulation.tester.CSVTester",
